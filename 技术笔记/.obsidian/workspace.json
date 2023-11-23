@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "73c618df242ccbca",
+        "id": "347e12a65d83d53b",
         "type": "tabs",
         "children": [
           {
-            "id": "5a85e4871fda159b",
+            "id": "11ea75590a7ad615",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "zhenk/设计模式/design-patterns-master/patterns/abstract_factory_pattern.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -167,7 +163,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5a85e4871fda159b",
+  "active": "db3eb86b1b0bdf6f",
   "lastOpenFiles": [
     "zhenk/设计模式/java-design-patterns/mediator/src/main/java/io/github/lvgocc/mediator/wangeruzhi/WangZai.java",
     "zhenk/设计模式/java-design-patterns/mediator/src/main/java/io/github/lvgocc/mediator/wangeruzhi/WangEr.java",
