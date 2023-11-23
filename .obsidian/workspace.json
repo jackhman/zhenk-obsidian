@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "fc9ca1600a2d4cdd",
+    "type": "split",
+    "children": [
+      {
+        "id": "52310cf34ae0338d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "137c60154339f4c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "技术笔记/mashibing/mca/mca-learning/P8_真P8架构师/常见痛点规避与大厂Bug处理专题/线上故障分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4fbe4c7421231183",
+    "type": "split",
+    "children": [
+      {
+        "id": "51f60d65308a907b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "02921cd99a61daf4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "106153fcdb410f83",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f27d3f2cc015db9c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "810e9a6e73ef901d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4767139b419bc85b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2275016f74eb47a0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "技术笔记/mashibing/mca/mca-learning/P8_真P8架构师/常见痛点规避与大厂Bug处理专题/线上故障分析.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "949258ba119309d8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "技术笔记/mashibing/mca/mca-learning/P8_真P8架构师/常见痛点规避与大厂Bug处理专题/线上故障分析.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd41ff38d7c5d973",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5419335da79611cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "技术笔记/mashibing/mca/mca-learning/P8_真P8架构师/常见痛点规避与大厂Bug处理专题/线上故障分析.md"
+              }
+            }
+          },
+          {
+            "id": "bffa7feb904fcbf3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "137c60154339f4c2",
+  "lastOpenFiles": [
+    "obsidian相关资料/obsidian需要的插件主题icon/sortspec.md",
+    "技术笔记/mashibing/mca/mca-learning/P6_持续扩展/软件测试-Java高级测试开发/测试.md",
+    "技术笔记/mashibing/mca/mca-learning/P6_持续扩展/软件测试-Java高级测试开发",
+    "技术笔记/mashibing/mca/mca-learning/P6_持续扩展",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/集合类值之间的关系.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/锁算法.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/节点失效监测机制.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/联合索引.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/职业规划.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/缓存穿透的原因.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/缓存击穿-互斥锁伪代码.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/线程间通信.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/线程的生命周期.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img/线程池的执行流程.png",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/5.并发编程面试题.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/img",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/9.缓存面试题-2.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/8.缓存面试题.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/7.并发编程面试题-3.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/6.并发编程面试题-2.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/4.java-web专题.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/3.IO和多线程专题.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/26. 项目面试.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/25.SpringBoot源码.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/24.Spring源码.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/23.Mybatis源码.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/22.云原生.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/21.微服务面试突击课.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/20.微服务架构设计.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/2.面向对象和集合专题.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/19.网络协议和Netty-2.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/18.网络协议和Netty-1.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/17.JVM面试题-3.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/16.JVM面试题-2.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/15.JVM面试题-1.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/14.消息队列.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/13.Elasticsearch.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/12.mysql面试-3.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四/11.mysql面试-2.md",
+    "技术笔记/mashibing/mca/mca-learning/面试突击/2023金三银四",
+    "技术笔记/mashibing/mca/mca-learning/面试突击",
+    "技术笔记/mashibing/mca/mca-learning/电子商城项目专题/从0到1手敲代码实现商城项目/基础部分/img",
+    "技术笔记/mashibing/mca/mca-learning/电子商城项目专题/从0到1手敲代码实现商城项目/基础部分",
+    "技术笔记/mashibing/mca/mca-learning/电子商城项目专题/从0到1手敲代码实现商城项目",
+    "技术笔记/mashibing/mca/mca-learning/电子商城项目专题",
+    "技术笔记/mashibing/mca/mca-learning/P8_真P8架构师/技术管理-走向P8/img"
+  ]
+}
