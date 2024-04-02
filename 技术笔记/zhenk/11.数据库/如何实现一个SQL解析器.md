@@ -735,6 +735,14 @@ public class JSqlClient {
 
 总的来说，终结符表达式对应于文法规则的最基本单元，而非终结符表达式表示如何将这些基本单元组合在一起以构建更复杂的结构。
 
+##  七、机器语言的执行过程
+- 对于常见编译型语言来说，编译步骤分为：`词法分析 -> 语法分析 -> 语义检查 -> 代码优化和字节码生成`。
+- 对于解释型语言（例如 JavaScript）来说，通过`词法分析 -> 语法分析 -> 语法树`，就可以开始解释执行了。
+![[image-20231214174437146.png]]
+
+下图是一个语法树的图示：
+![](https://xinxingyu.github.io/blog/assets/img/ast2.eb2e535c.png)
+
 **参考资料：**
 1. [https://github.com/smartloli/EFAK](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fsmartloli%2FEFAK&source=article&objectId=2137892)
 2. [https://github.com/antlr/antlr4](https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fgithub.com%2Fantlr%2Fantlr4&source=article&objectId=2137892)
