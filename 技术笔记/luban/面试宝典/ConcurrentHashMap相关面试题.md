@@ -1,0 +1,81 @@
+## ConcurrentHashMap和HashMap的区别是什么？
+
+  
+
+ConcurrentHashMap是HashMap的升级版，HashMap是线程不安全的，而ConcurrentHashMap是线程安全。而其他功能和实现原理和HashMap类似。
+
+  
+
+## JDK8的ConcurrentHashMap和JDK7的ConcurrentHashMap有什么区别？
+
+  
+
+1. JDK8中新增了红黑树
+2. JDK7中使用的是头插法，JDK8中使用的是尾插法
+3. JDK7中使用了分段锁，而JDK8中没有使用分段锁了
+4. JDK7中使用了ReentrantLock，JDK8中没有使用ReentrantLock了，而使用了Synchronized
+5. JDK7中的扩容是每个Segment内部进行扩容，不会影响其他Segment，而JDK8中的扩容和HashMap的扩容类似，只不过支持了多线程扩容，并且保证了线程安全
+
+  
+
+## ConcurrentHashMap是如何保证并发安全的？
+
+  
+
+JDK7中ConcurrentHashMap是通过ReentrantLock+CAS+分段思想来保证的并发安全的，在JDK7的ConcurrentHashMap中，首先有一个Segment数组，存的是Segment对象，Segment相当于一个小HashMap，Segment内部有一个HashEntry的数组，也有扩容的阈值，同时Segment继承了ReentrantLock类，同时在Segment中还提供了put，get等方法，比如Segment的put方法在一开始就会去加锁，加到锁之后才会把key,value存到Segment中去，然后释放锁。
+
+  
+
+同时在ConcurrentHashMap的put方法中，会通过CAS的方式把一个Segment对象存到Segment数组的某个位置中。
+
+  
+
+同时因为一个Segment内部存在一个HashEntry数组，所以和HashMap对比来看，相当于分段了，每段里面是一个小的HashMap，每段公用一把锁，同时在ConcurrentHashMap的构造方法中是可以设置分段的数量的，叫做并发级别concurrencyLevel.
+
+  
+
+JDK8中ConcurrentHashMap是通过synchronized+cas来实现了。在JDK8中只有一个数组，就是Node数组，Node就是key，value，hashcode封装出来的对象，和HashMap中的Entry一样，在JDK8中通过对Node数组的某个index位置的元素进行同步，达到该index位置的并发安全。同时内部也利用了CAS对数组的某个位置进行并发安全的赋值。
+
+  
+
+## JDK8中的ConcurrentHashMap为什么使用synchronized来进行加锁？
+
+  
+
+JDK8中使用synchronized加锁时，是对链表头结点和红黑树根结点来加锁的，而ConcurrentHashMap会保证，数组中某个位置的元素一定是链表的头结点或红黑树的根结点，所以JDK8中的ConcurrentHashMap在对某个桶进行并发安全控制时，只需要使用synchronized对当前那个位置的数组上的元素进行加锁即可，对于每个桶，只有获取到了第一个元素上的锁，才能操作这个桶，不管这个桶是一个链表还是红黑树。
+
+想比于JDK7中使用ReentrantLock来加锁，因为JDK7中使用了分段锁，所以对于一个ConcurrentHashMap对象而言，分了几段就得有几个ReentrantLock对象，表示得有对应的几把锁。
+
+而JDK8中使用synchronized关键字来加锁就会更节省内存，并且jdk也已经对synchronized的底层工作机制进行了优化，效率更好。
+
+  
+
+  
+
+## JDK7中的ConcurrentHashMap是如何扩容的？
+
+  
+
+JDK7中的ConcurrentHashMap和JDK7的HashMap的扩容是不太一样的，首先JDK7中也是支持多线程扩容的，原因是，JDK7中的ConcurrentHashMap分段了，每一段叫做Segment对象，每个Segment对象相当于一个HashMap，分段之后，对于ConcurrentHashMap而言，能同时支持多个线程进行操作，前提是这些操作的是不同的Segment，而ConcurrentHashMap中的扩容是仅限于本Segment，也就是对应的小型HashMap进行扩容，所以是可以多线程扩容的。
+
+  
+
+每个Segment内部的扩容逻辑和HashMap中一样。
+
+  
+
+## JDK8中的ConcurrentHashMap是如何扩容的？
+
+  
+
+首先，JDK8中是支持多线程扩容的，JDK8中的ConcurrentHashMap不再是分段，或者可以理解为每个桶为一段，在需要扩容时，首先会生成一个双倍大小的数组，生成完数组后，线程就会开始转移元素，在扩容的过程中，如果有其他线程在put，那么这个put线程会帮助去进行元素的转移，虽然叫转移，但是其实是基于原数组上的Node信息去生成一个新的Node的，也就是原数组上的Node不会消失，因为在扩容的过程中，如果有其他线程在get也是可以的。
+
+  
+
+## JDK8中的ConcurrentHashMap有一个CounterCell，你是如何理解的？
+
+  
+
+CounterCell是JDK8中用来统计ConcurrentHashMap中所有元素个数的，在统计ConcurentHashMap时，不能直接对ConcurrentHashMap对象进行加锁然后再去统计，因为这样会影响ConcurrentHashMap的put等操作的效率，在JDK8的实现中使用了CounterCell+baseCount来辅助进行统计，baseCount是ConcurrentHashMap中的一个属性，某个线程在调用ConcurrentHashMap对象的put操作时，会先通过CAS去修改baseCount的值，如果CAS修改成功，就计数成功，如果CAS修改失败，则会从CounterCell数组中随机选出一个CounterCell对象，然后利用CAS去修改CounterCell对象中的值，因为存在CounterCell数组，所以，当某个线程想要计数时，先尝试通过CAS去修改baseCount的值，如果没有修改成功，则从CounterCell数组中随机取出来一个CounterCell对象进行CAS计数，这样在计数时提高了效率。
+
+所以ConcurrentHashMap在统计元素个数时，就是baseCount加上所有CountCeller中的value只，所得的和就是所有的元素个数。
